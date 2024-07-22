@@ -13,10 +13,10 @@ int main() {
     cnt_int[num]++;
     for (int i = 1; i < n; i++) {
         cin >> num;
-        for (auto it: cnt_int) {
-            cnt_sum[num + it.second] += cnt_int[it.second];
-        }
         res += cnt_sum[k - num];
+        for (auto it: cnt_int) {
+            cnt_sum[num + it.first] += it.second;
+        }
         cnt_int[num]++;
     }
     cout << res << '\n';
