@@ -33,7 +33,8 @@ int main() {
     }
     int res = 0;
     for (const auto &it: seq[1]) {
-        res += seq[3][-it.first] * it.second;
+        if (seq[3].find(-it.first) != seq[3].end())
+            res += seq[3][-it.first] * it.second;
     }
     cout << res;
     return 0;
