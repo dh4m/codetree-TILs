@@ -32,11 +32,8 @@ int main() {
         }
     }
     int res = 0;
-    for (const auto &i1: seq[1]) {
-        for (const auto &i2: seq[3]) {
-            if (i1.first + i2.first == 0)
-                res += i1.second * i2.second;
-        }
+    for (const auto &it: seq[1]) {
+        res += seq[3][-it.first] * it.second;
     }
     cout << res;
     return 0;
