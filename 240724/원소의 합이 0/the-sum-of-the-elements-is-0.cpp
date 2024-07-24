@@ -35,7 +35,7 @@ int main() {
     for (const auto &i1: seq[1]) {
         for (const auto &i2: seq[3]) {
             if (i1.first + i2.first == 0)
-                res += i2.second;
+                res += i1.second * i2.second;
         }
     }
     cout << res;
