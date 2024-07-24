@@ -14,7 +14,7 @@ int main() {
         seq[0][num]++;
     }
     write_map = 1;
-    for (int s = 1; s < 4; s++) {
+    for (int s = 1; s < 3; s++) {
         seq[write_map].clear();
         for (int i = 0; i < n; i++) {
             int num;
@@ -25,6 +25,18 @@ int main() {
         }
         write_map = !write_map;
     }
-    cout << seq[!write_map][0];
+
+    int res = 0;
+    seq[write_map].clear();
+    for (int i = 0; i < n; i++) {
+        int num;
+        cin >> num;
+        for (auto it: seq[!write_map]) {
+            if (num + it.first == 0) {
+                res += it.second;
+            }
+        }
+    }
+    cout << res;
     return 0;
 }
