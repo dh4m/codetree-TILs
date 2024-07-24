@@ -10,7 +10,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         int x, y;
         cin >> x >> y;
-        if (!y_map[x] || y_map[x] > y)
+        if (y_map.find(x) == y_map.end() || y_map[x] > y)
             y_map[x] = y;
     }
     int sum = 0;
