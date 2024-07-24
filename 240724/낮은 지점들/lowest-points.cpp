@@ -13,7 +13,7 @@ int main() {
         if (y_map.find(x) == y_map.end() || y_map[x] > y)
             y_map[x] = y;
     }
-    int sum = 0;
+    long long sum = 0;
     for (const auto &it: y_map) {
         sum += it.second;
     }
