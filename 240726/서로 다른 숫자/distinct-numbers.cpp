@@ -14,10 +14,6 @@ int main() {
         cin >> num;
         s.insert(num);
     }
-    int cnt = 0;
-    for (const auto &it : s) {
-        cnt++;
-    }
-    cout << cnt;
+    cout << s.size();
     return 0;
 }
